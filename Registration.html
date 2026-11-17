@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <center>
+        <h1>Registration</h1>
+
+        <form action="Thankyou.html" method="get">
+            <input type="hidden" name="user_id" value="1001">
+
+            <table border="1" cellpadding="8" cellspacing="0" width="650">
+                <tr>
+                    <th colspan="2">Personal Information</th>
+                </tr>
+
+                <tr>
+                    <td><label for="first_name">First Name</label></td>
+                    <td><input type="text" id="first_name" name="first_name"
+                        pattern="[A-Za-z]+([ ][A-Za-z]+)*" title="Use English letters only"
+                        required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="last_name">Last Name</label></td>
+                    <td><input type="text" id="last_name" name="last_name"
+                        pattern="[A-Za-z]+([ ][A-Za-z]+)*" title="Use English letters only"
+                        required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password" name="password"
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                        title="At least 8 characters, including uppercase, lowercase, number and special character"
+                        required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="repeat_password">Repeat Password</label></td>
+                    <td><input type="password" id="repeat_password" name="repeat_password"
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                        title="Enter a password with at least 8 characters, uppercase, lowercase, number and special character"
+                        required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="picture">User Picture</label></td>
+                    <td><input type="file" id="picture" name="picture" accept="image/*"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="faculty">Faculty</label></td>
+                    <td>
+                        <select id="faculty" name="faculty" required>
+                            <option value="">-- Select Faculty --</option>
+                            <option value="Computers and Information">Computers and Information</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Science">Science</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">Interests</th>
+                </tr>
+                <tr>
+                    <td>Choose your interests</td>
+                    <td>
+                        <input type="checkbox" id="swimming" name="interests" value="Swimming">
+                        <label for="swimming">Swimming</label><br>
+                        <input type="checkbox" id="reading" name="interests" value="Reading">
+                        <label for="reading">Reading</label><br>
+                        <input type="checkbox" id="programming" name="interests" value="Programming">
+                        <label for="programming">Programming</label><br>
+                        <input type="checkbox" id="football" name="interests" value="Football">
+                        <label for="football">Football</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="about">About You</label></td>
+                    <td><textarea id="about" name="about" rows="4" cols="35"></textarea></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">Additional Information</th>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone Number</label></td>
+                    <td><input type="tel" id="phone" name="phone"
+                        pattern="01(0|1|2|5)[0-9]{8}"
+                        title="Enter an 11-digit Egyptian number starting with 010, 011, 012 or 015"
+                        required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="gpa">GPA</label></td>
+                    <td><input type="number" id="gpa" name="gpa"
+                        min="0.0" max="4.0" step="0.1" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="dob">Date of Birth</label></td>
+                    <td><input type="date" id="dob" name="dob"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="checkbox" id="terms" name="terms" value="agreed" required>
+                        <label for="terms">
+                            I agreed to the <a href="terms.html" target="_blank">terms and conditions</a>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
